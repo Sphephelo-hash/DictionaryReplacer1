@@ -113,5 +113,21 @@ namespace DictionaryReplacer.Test
             // Assert
             Assert.AreEqual(expected, result);
         }
+
+        [Test]
+        public void GivenTemplateString_WhenReplacingKeysWithMultipleWords_ShouldReturnAstringWithTheWordsReplaced()
+        {
+            // Arrange
+            string expected = "This should work neatly";
+            Dictionary<string, string> dictionary = new Dictionary<string, string>() { { "will it work", "work neatly" } };
+            string sentence = "This should $will it work$";
+
+            // Act
+            string result = _dictionaryReplacer.Replace(sentence, dictionary);
+
+            // Assert
+            Assert.AreEqual(expected, result);
+        }
+
     }
 }

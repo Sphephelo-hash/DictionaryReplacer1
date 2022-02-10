@@ -25,6 +25,15 @@ namespace DictionaryReplacer
             return replacedWords;
         }
 
+        public string SplitSentence(string sentence)
+           {
+            List<string> splitsentence = new List<string>();
+            while (true)
+            {
+                string current = "";
+
+            }
+           }
         public string TrimDollarSigns(string word)
         {            
             return word.Replace('$', ' ').Trim(); 
