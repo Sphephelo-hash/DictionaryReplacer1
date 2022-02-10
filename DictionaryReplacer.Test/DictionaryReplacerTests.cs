@@ -31,6 +31,7 @@ namespace DictionaryReplacer.Test
             // Arrange
             List<string> expected= new List<string>() { "temp","name"};
             string[] splitwords = { "$temp$", "here comes the name", "$name$" };
+
             // Act
             List <string> result = _dictionaryReplacer.GetKeys(splitwords);
 

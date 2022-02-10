@@ -12,7 +12,12 @@ namespace DictionaryReplacer
         {
             if(string.IsNullOrEmpty(sentence) || dictionary.Equals(null) ){
                 return string.Empty;
-            }
+            }            
+            return ReplaceWords(sentence,dictionary);
+        }
+
+        public string ReplaceWords(string sentence, Dictionary<string, string> dictionary)
+        {
             string[] wordList = sentence.Split(' ');
             List<string> keys = GetKeys(wordList);
             List<string> values = FindValuesInDictionary(dictionary, keys);
